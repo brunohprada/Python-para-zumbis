@@ -9,11 +9,11 @@ split(), a seguir crie uma lista com as palavras que começam ou terminam com um
 e cuidado com maiúsculas e minúsculas.
 Autor: Felipe Nogueira de Souza
 '''
+import string
 def limpa_txt(texto):
+    for p in string.punctuation:
+        texto = texto.replace(p, '')
     texto = texto.lower()
-    texto = texto.replace('.', '')
-    texto = texto.replace(',', '')
-    texto = texto.replace(':', '')
     texto = texto.split()
     return texto
 
